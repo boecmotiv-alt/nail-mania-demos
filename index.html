@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NAIL MANIA — концепты сайта · выбор дизайна</title>
+<meta name="description" content="Четыре концепта сайта для студии Nail Mania (Сочи). Выберите стиль — или покажите любой понравившийся сайт, сделаем в нём.">
+<style>
+  :root{
+    --bg:#f6f1ea; --card:#fffdfa; --ink:#2a2422; --muted:#8a7f76;
+    --line:#e7ddd1; --gold:#c9a24b; --neon:#ff5c8a;
+    --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(1200px 600px at 80% -10%,#fbe9ee 0%,transparent 60%),radial-gradient(900px 500px at 0% 0%,#f3ead9 0%,transparent 55%);}
+  .wrap{max-width:1080px;margin:0 auto;padding:clamp(28px,6vw,72px) clamp(18px,5vw,40px)}
+  header{text-align:center;margin-bottom:clamp(30px,6vw,60px)}
+  .kicker{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  .logo{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,60px);letter-spacing:.04em;line-height:1.05}
+  .logo b{color:transparent;-webkit-text-stroke:1px var(--ink)}
+  .heart{color:var(--neon);text-shadow:0 0 18px rgba(255,92,138,.55)}
+  .lead{max-width:620px;margin:20px auto 0;color:#5f564f;font-size:clamp(15px,2.2vw,18px)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(16px,2.5vw,24px)}
+  a.card{display:flex;flex-direction:column;justify-content:flex-end;min-height:230px;
+    text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    padding:22px;position:relative;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    box-shadow:0 8px 30px rgba(120,100,80,.06)}
+  a.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(120,100,80,.16);border-color:var(--gold)}
+  a.card .num{position:absolute;top:16px;right:20px;font-family:var(--serif);font-size:15px;color:var(--muted)}
+  a.card h3{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:6px}
+  a.card p{font-size:14px;color:var(--muted)}
+  a.card .go{margin-top:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .c-site{background:linear-gradient(160deg,#fffdfa,#f7efe4)}
+  .c-lux{background:linear-gradient(160deg,#fff8f0,#f3e6cf)}
+  .c-noir{background:linear-gradient(160deg,#241f1d,#3a302c);color:#f3ece2;border-color:#3f342f}
+  .c-noir h3,.c-noir .num{color:#f6efe6}.c-noir p{color:#b9aa9c}.c-noir .go{color:#e6c079}
+  .c-quiet{background:linear-gradient(160deg,#f4f1ec,#e9e3da)}
+  .note{margin-top:clamp(28px,5vw,48px);background:var(--card);border:1px solid var(--line);
+    border-radius:18px;padding:clamp(22px,4vw,34px);text-align:center}
+  .note h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,30px);margin-bottom:10px}
+  .note p{color:#5f564f;max-width:640px;margin:0 auto}
+  .note .accent{color:var(--neon);font-weight:600}
+  footer{text-align:center;margin-top:40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Концепты сайта · студия Nail Mania · Сочи</div>
+    <div class="logo">NAIL <b>MANIA</b> <span class="heart">♥</span></div>
+    <p class="lead">Четыре готовых направления дизайна. Откройте каждое, «пощупайте» на телефоне и выберите, что ближе бренду. Финальный сайт доводим под вас.</p>
+  </header>
+
+  <div class="grid">
+    <a class="card c-site" href="site/">
+      <span class="num">01</span>
+      <h3>Светлый премиум</h3>
+      <p>Тёплые нейтралы, воздух, мрамор. Чисто и дорого.</p>
+      <span class="go">Открыть →</span>
+    </a>
+    <a class="card c-lux" href="lux/">
+      <span class="num">02</span>
+      <h3>Luxury / глянец</h3>
+      <p>Золото, глянцевые акценты, «премиум-настроение».</p>
+      <span class="go">Открыть →</span>
+    </a>
+    <a class="card c-noir" href="noir/">
+      <span class="num">03</span>
+      <h3>Noir · вечерний</h3>
+      <p>Тёмный бьюти-бутик, неон, статус и драма.</p>
+      <span class="go">Открыть →</span>
+    </a>
+    <a class="card c-quiet" href="quiet/">
+      <span class="num">04</span>
+      <h3>Тихая роскошь</h3>
+      <p>Минимализм, спокойствие, «clean girl» эстетика.</p>
+      <span class="go">Открыть →</span>
+    </a>
+  </div>
+
+  <div class="note">
+    <h2>Не обязательно выбирать из этих четырёх</h2>
+    <p>Если увидите <span class="accent">любой понравившийся сайт салона</span> — пришлите ссылку. Сделаем в похожем стиле или возьмём оттуда конкретный элемент. Эти демо — точка старта, а не финал.</p>
+  </div>
+
+  <footer>Демо-концепты · для ознакомления</footer>
+</div>
+</body>
+</html>
