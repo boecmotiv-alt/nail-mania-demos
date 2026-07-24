@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Сайт для NAIL MANIA — коммерческое предложение</title>
+<meta name="description" content="Готовый сайт для салона NAIL MANIA: 4 концепта на выбор, онлайн-запись, продвижение под поиск. Создание за 7 дней." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FBF7F4; --surface:#FFFFFF; --ink:#2A2320; --muted:#8A7E76;
+    --line:#ECE2DB; --accent:#B76E79; --accent-deep:#9A545F; --soft:#F3E9E6;
+    --sans:'Manrope',system-ui,sans-serif; --serif:'Cormorant Garamond',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-0.01em}
+  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.32em;color:var(--accent);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:1rem 2rem;border-radius:100px;font-weight:600;font-size:.95rem;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 24px -10px var(--accent)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--accent-deep)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* HEADER */
+  header{padding:1.6rem 0;position:sticky;top:0;background:rgba(251,247,244,.85);backdrop-filter:blur(10px);z-index:20;border-bottom:1px solid var(--line)}
+  .hd{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .logo{font-family:var(--serif);font-size:1.35rem;font-weight:700;letter-spacing:.02em}
+  .logo small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+  .hd-phone{font-weight:600;font-size:.95rem}
+  @media(max-width:640px){.hd-phone{display:none}}
+
+  /* HERO */
+  .hero{padding:5rem 0 4rem;text-align:center}
+  .hero .eyebrow{margin-bottom:1.2rem;display:block}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.5rem);margin-bottom:1.4rem}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:600px;margin:0 auto 2.4rem}
+  .hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+  section{padding:4.5rem 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,2.9rem);margin:1rem 0 .8rem}
+  .sec-head p{color:var(--muted)}
+
+  /* WHY */
+  .why-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
+  @media(min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+  .why-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2rem}
+  .why-ic{width:48px;height:48px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);font-size:1.4rem;margin-bottom:1.1rem}
+  .why-card h3{font-size:1.4rem;margin-bottom:.5rem}
+  .why-card p{color:var(--muted);font-size:.95rem}
+
+  /* CONCEPTS */
+  .concepts{background:var(--soft)}
+  .con-grid{display:grid;gap:1.4rem;grid-template-columns:1fr}
+  @media(min-width:640px){.con-grid{grid-template-columns:repeat(2,1fr)}}
+  .con-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.9rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .25s,box-shadow .25s}
+  .con-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -22px rgba(42,35,32,.35)}
+  .con-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.24em;color:var(--accent);font-weight:700}
+  .con-card h3{font-size:1.8rem}
+  .con-card p{color:var(--muted);font-size:.92rem;flex:1}
+  .con-card .go{font-weight:600;color:var(--accent);font-size:.9rem;margin-top:.4rem}
+
+  /* OFFER */
+  .offer-box{background:var(--surface);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(42,35,32,.4)}
+  .offer-top{padding:2.4rem 2.4rem 2rem;border-bottom:1px dashed var(--line);text-align:center;background:linear-gradient(180deg,var(--soft),transparent)}
+  .offer-top .price{font-family:var(--serif);font-size:3.4rem;font-weight:700;color:var(--ink);line-height:1}
+  .offer-top .price span{color:var(--accent)}
+  .offer-top .plabel{font-size:.8rem;text-transform:uppercase;letter-spacing:.24em;color:var(--muted);margin-top:.6rem}
+  .offer-body{padding:2.2rem 2.4rem}
+  .flist{list-style:none;display:grid;gap:.85rem}
+  @media(min-width:640px){.flist{grid-template-columns:1fr 1fr;gap:.85rem 2rem}}
+  .flist li{display:flex;gap:.7rem;align-items:flex-start;font-size:.96rem}
+  .flist li::before{content:'✓';color:var(--accent);font-weight:800;flex-shrink:0}
+  .after{margin-top:2rem;padding:1.8rem;background:var(--soft);border-radius:18px}
+  .after h4{font-family:var(--sans);font-size:.75rem;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);margin-bottom:1rem;font-weight:700}
+  .after ul{list-style:none;display:grid;gap:.7rem}
+  .after li{display:flex;gap:.7rem;align-items:flex-start;font-size:.94rem}
+  .after li::before{content:'✓';color:var(--accent);font-weight:800;flex-shrink:0}
+  .after b{color:var(--ink)}
+
+  /* WHYME */
+  .whyme-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
+  @media(min-width:720px){.whyme-grid{grid-template-columns:repeat(4,1fr)}}
+  .stat{text-align:center;padding:1.6rem 1rem;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+  .stat .n{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--accent)}
+  .stat .l{font-size:.85rem;color:var(--muted);margin-top:.3rem}
+  .examples{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
+  .examples a{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+  /* CTA */
+  .cta{background:var(--ink);color:#fff;border-radius:28px;padding:3.5rem 2rem;text-align:center;margin-bottom:4rem}
+  .cta .eyebrow{color:#E6A9B2}
+  .cta h2{font-size:clamp(2rem,4.5vw,3rem);margin:1rem 0 .8rem}
+  .cta p{color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 2rem}
+  .cta .row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.3)}
+  .cta .btn-ghost:hover{border-color:#fff;color:#fff}
+
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding-bottom:3rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">Мир Тимошенко<small>Создание сайтов · Сочи</small></div>
+    <a class="hd-phone" href="tel:+79002983601">+7 900 298-36-01</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Предложение для салона NAIL MANIA</span>
+    <h1>Ваш сайт <em>уже готов</em> —<br>осталось выбрать</h1>
+    <p class="lead">Мы заранее сделали для NAIL MANIA четыре готовых концепта сайта. Не эскизы, не обещания — рабочие страницы, которые можно открыть с телефона прямо сейчас.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#concepts">Смотреть 4 концепта</a>
+      <a class="btn btn-ghost" href="#offer">Что входит и цена</a>
+    </div>
+  </section>
+</div>
+
+<!-- WHY -->
+<div class="wrap">
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Зачем салону сайт</span>
+      <h2>Клиентки ищут маникюр онлайн</h2>
+      <p>И записываются туда, где смогли — на сайте, в поиске, на картах. Без сайта этот поток уходит к конкурентам.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-ic">🔍</div>
+        <h3>Поиск и карты</h3>
+        <p>«Маникюр Сочи», «педикюр рядом» — так вас находят новые клиентки. Сайт выводит салон в Яндекс и на Карты.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ic">📅</div>
+        <h3>Запись 24/7</h3>
+        <p>Форма записи работает круглосуточно. Клиентка оставляет заявку сама — без переписки в директе и «свободно ли завтра?».</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ic">✨</div>
+        <h3>Статус салона</h3>
+        <p>Красивый сайт с вашими работами — это доверие. Он показывает уровень ещё до первого визита.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CONCEPTS -->
+<section class="concepts" id="concepts">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Уже сделано для вас</span>
+      <h2>4 концепта вашего сайта</h2>
+      <p>Откройте каждый, полистайте с телефона. Понравившийся берём за основу — или делаем по вашему примеру из интернета.</p>
+    </div>
+    <div class="con-grid">
+      <a class="con-card" href="../site/" target="_blank" rel="noopener">
+        <span class="con-tag">Concept 01</span>
+        <h3>Classic</h3>
+        <p>Светлый премиум: воздух, мягкие тона, акцент на работах. Универсальный и тёплый — подходит большинству салонов.</p>
+        <span class="go">Открыть концепт →</span>
+      </a>
+      <a class="con-card" href="../lux/" target="_blank" rel="noopener">
+        <span class="con-tag">Concept 02</span>
+        <h3>Lux</h3>
+        <p>Роскошь и золото. Дорогая подача для бьюти-бутика: глубокие акценты, ощущение люкса с первого экрана.</p>
+        <span class="go">Открыть концепт →</span>
+      </a>
+      <a class="con-card" href="../noir/" target="_blank" rel="noopener">
+        <span class="con-tag">Concept 03</span>
+        <h3>Noir</h3>
+        <p>Тёмная вечерняя эстетика. Смело и стильно — для салона, который хочет выделяться и запоминаться.</p>
+        <span class="go">Открыть концепт →</span>
+      </a>
+      <a class="con-card" href="../quiet/" target="_blank" rel="noopener">
+        <span class="con-tag">Concept 04</span>
+        <h3>Quiet</h3>
+        <p>Тихая роскошь и минимализм. Спокойный, дорогой, ничего лишнего — эстетика для ценителей сдержанности.</p>
+        <span class="go">Открыть концепт →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<div class="wrap">
+  <section id="offer">
+    <div class="sec-head">
+      <span class="eyebrow">Что входит</span>
+      <h2>Полный сайт под ключ</h2>
+      <p>Вам не нужно ничего настраивать или в чём-то разбираться. Я делаю всё сам — вы получаете готовый работающий сайт.</p>
+    </div>
+    <div class="offer-box">
+      <div class="offer-top">
+        <div class="price">25 000 <span>₽</span></div>
+        <div class="plabel">разово · готовность за 7 дней</div>
+      </div>
+      <div class="offer-body">
+        <ul class="flist">
+          <li>Дизайн: выбор из готовых концептов или по вашему примеру из интернета + ваши идеи</li>
+          <li>Адаптив под телефон — сайт идеально смотрится на любом экране</li>
+          <li>Форма записи — заявки приходят на почту и в Telegram</li>
+          <li>Продвижение под поиск (базовое и техническое SEO)</li>
+          <li>Домен на первый год + подключение и запуск</li>
+          <li>Безопасное соединение (замочек 🔒, без пометки «не защищено»)</li>
+          <li>2 пакета правок в процессе создания</li>
+          <li>Готовый сайт за 7 дней</li>
+        </ul>
+        <div class="after">
+          <h4>После запуска</h4>
+          <ul>
+            <li><b>5 правок в первый месяц — бесплатно</b></li>
+            <li><b>Хостинг первый месяц — в подарок</b></li>
+            <li>Дальше на выбор: ведение через меня — хостинг, поддержка и мелкие правки <b>1 000 ₽/мес</b> сроком на год. Потом продлеваем или <b>бесплатно переношу сайт на ваш сервер</b> (можно сразу делать на вашем).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- WHY ME -->
+<div class="wrap">
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Почему со мной</span>
+      <h2>Местный, быстро, с реальными работами</h2>
+    </div>
+    <div class="whyme-grid">
+      <div class="stat"><div class="n">7</div><div class="l">дней до готового сайта</div></div>
+      <div class="stat"><div class="n">Сочи</div><div class="l">местный — можно встретиться</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">концепта уже готовы для вас</div></div>
+      <div class="stat"><div class="n">1:1</div><div class="l">работаю с вами лично, без агентства</div></div>
+    </div>
+    <p class="examples">Примеры живых сайтов моей работы:
+      <a href="https://timoshenko-lor.ru" target="_blank" rel="noopener">timoshenko-lor.ru</a> ·
+      <a href="https://mir-stroy-remont.ru" target="_blank" rel="noopener">mir-stroy-remont.ru</a>
+    </p>
+  </section>
+</div>
+
+<!-- CTA -->
+<div class="wrap">
+  <section class="cta">
+    <span class="eyebrow">Готовы начать</span>
+    <h2>Выберите концепт — и через 7 дней сайт ваш</h2>
+    <p>Напишите или позвоните: обсудим, какой вариант ближе, и я приступаю. Первый шаг ни к чему не обязывает.</p>
+    <div class="row">
+      <a class="btn" href="tel:+79002983601">Позвонить: +7 900 298-36-01</a>
+      <a class="btn btn-ghost" href="#concepts">Ещё раз посмотреть концепты</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">Мир Тимошенко · Создание сайтов в Сочи · +7 900 298-36-01</div>
+</footer>
+
+</body>
+</html>
