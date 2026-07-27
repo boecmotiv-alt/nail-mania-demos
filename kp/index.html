@@ -74,9 +74,9 @@
   .offer-top .price span{color:var(--accent)}
   .offer-top .plabel{font-size:.8rem;text-transform:uppercase;letter-spacing:.24em;color:var(--muted);margin-top:.6rem}
   .offer-body{padding:2.2rem 2.4rem}
-  .flist{list-style:none;display:grid;gap:.85rem}
-  @media(min-width:640px){.flist{grid-template-columns:1fr 1fr;gap:.85rem 2rem}}
-  .flist li{display:flex;gap:.7rem;align-items:flex-start;font-size:.96rem}
+  .flist{list-style:none}
+  @media(min-width:640px){.flist{column-count:2;column-gap:2rem}}
+  .flist li{display:flex;gap:.7rem;align-items:flex-start;font-size:.96rem;margin-bottom:.7rem;break-inside:avoid}
   .flist li::before{content:'✓';color:var(--accent);font-weight:800;flex-shrink:0}
   .addon{margin-top:1.6rem;padding:1.1rem 1.4rem;border:1px dashed var(--accent);border-radius:14px;background:rgba(183,110,121,.06);display:flex;gap:.7rem;align-items:flex-start}
   .addon::before{content:'+';color:var(--accent);font-weight:800;font-size:1.2rem;line-height:1.2}
